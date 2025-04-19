@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Hernandez_Cris-Personal_Website</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <style>
+             /* Add glowing effect to navbar links */
+             .navbar-nav .nav-link {
+                position: relative;
+                color: white;
+                transition: color 0.3s ease-in-out;
+                font-family: Arial;
+                font-weight: bold;
+            }
+        
+            .navbar-nav .nav-link:hover,
+            .navbar-nav .nav-link.active {
+                color: #00ffcc;
+                text-shadow: 0 0 8px #00ffcc;
+            }
+        
+            .navbar-nav .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background-color: #00ffcc;
+                transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+            }
+        
+            .navbar-nav .nav-link:hover::after,
+            .navbar-nav .nav-link.active::after {
+                width: 100%;
+                left: 0;
+            }
+        
+            .navbar {
+                justify-content: flex-end;
+                background-color: rgba(19, 18, 18, 0.8); 
+                backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+            }
+
+        
+
+            .navbar-brand {
+                color: #00ffcc ; 
+            }
+
+            .navbar-nav .nav-link {
+                color: #ffffff ; 
+                transition: color 0.3s ease-in-out;
+                position: relative;
+            }
+
+
+            body {
+                padding-top: 56px; /* Adjust based on the height of your navbar */
+                background-size: cover; /* Ensures the image covers the entire background*/
+                background-image: url('BG.png'); /* Reference the BG.png file */
+                background-repeat: no-repeat; /* Prevents the image from repeating */
+                background-attachment: fixed; /* Keeps the background fixed during scrolling */
+                background-position: center; /* Centers the image */
+            
+            }
+
+            .one {
+                 padding-top: 40px;
+                 padding-bottom: 130px;
+                 
+                
+
+            }
+
+            .aboutme {
+                padding-top: 100px;
+                padding-bottom: 100px;
+                margin-top: 40px;
+
+            }
+
+            .skill{
+                margin-top: 40px;
+                padding-top: 80px;
+                padding-bottom: 100px;
+            }
+
+            .skill h2{
+               padding-bottom: 30px;
+            }
+
+            .educations{
+                margin-top: 20px;
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+
+            .educations h2{
+                padding-bottom: 30px;
+            }
+            
+
+            .two {
+                margin-top: 20px;
+            }
+
+            .three {
+                padding-top: 70px;
+            }
+            .three h1 {
+                padding-bottom: 0%;
+            }
+
+            .picture.img-fluid.rounded-circle {
+                box-shadow: 0 0 15px 5px #00ffcc; /* Glowing effect */
+                transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+            }
+
+            .picture.img-fluid.rounded-circle:hover {
+                 box-shadow: 0 0 25px 10px #00ffcc; /* Stronger glow on hover */
+            }       
+
+             /* Typing effect */
+            .typing-effect {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 2.5rem;
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 3px solid #00ffcc; /* Cursor effect */
+                width: 0;
+                animation: typing 6s steps(30, end) infinite, blink 0.5s step-end infinite;
+                color: #00ffcc; /* Neon green color */
+                text-shadow: 0 0 8px #00ffcc; /* Glowing effect */
+            }
+
+            @keyframes typing {
+                0% {
+                    width: 0;
+            }
+            60% {
+                width: 50%;
+            }
+            100% {
+                width: 0;
+            }
+            }
+
+            @keyframes blink {
+            from {
+            border-right-color: #00ffcc;
+            }
+            to {
+                border-right-color: transparent;
+            }
+            }
+            /* Circular border for the button */
+    .about.btn-primary {
+        padding: 15px 30px; /* Adjust padding for better appearance */
+        transition: all 0.3s ease-in-out; /* Smooth transition */
+        font-weight: bold; /* Highlight the text */
+        text-transform: uppercase; /* Makes the text uppercase for emphasis */
+    }
+
+    /* Glowing effect on hover */
+    .about.btn-primary:hover {
+        box-shadow: 0 0 15px 5px #007bff; /* Blue glowing effect */
+        background-color: #0056b3; /* Darker blue on hover */
+        color: #ffffff; /* Ensure text remains white */
+    }
+
+     /* Glowing effect on hover for social media icons */
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border: 2px solid #00ffcc; /* Neon green border */
+            border-radius: 50%; /* Makes the border circular */
+            color: #00ffcc; /* Icon color */
+            transition: all 0.3s ease-in-out; /* Smooth transition */
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2); /* Zoom effect on hover */
+            background-color: #00ffcc; /* Neon green background */
+            color: #ffffff; /* White icon color on hover */
+            text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff; /* Glowing effect */
+        }
+        .about-me-title {
+        color: #00ffcc; /* Neon green color */
+        text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; /* Glowing effect */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2.5rem; /* Adjust font size as needed */
+        font-weight: bold;
+        transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
+    }
+
+    .about-me-title:hover {
+        text-shadow: 0 0 12px #00ffcc, 0 0 24px #00ffcc; /* Stronger glow on hover */
+    }
+
+    .picture.img-fluid.rounded-5 {
+                box-shadow: 0 0 15px 5px #00ffcc; /* Glowing effect */
+                transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+            }
+
+            .picture.img-fluid.rounded-5:hover {
+                 box-shadow: 0 0 25px 10px #00ffcc; /* Stronger glow on hover */
+            }
+
+            /* Constellation effect for the entire background */
+    body {
+        margin: 0;
+        
+    }
+
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Ensure it stays behind all content */
+    }
+
+    /* Hover effect for the card */
+    .card:hover {
+        transform: scale(1.05); /* Zoom effect */
+    
+    }
+
+    /* Timeline Container */
+    .timeline {
+        position: relative;
+        margin: 50px 0;
+        padding: 0 ;
+    }
+
+    /* Timeline Item */
+    .timeline-item {
+        position: relative;
+        width: 50%;
+        margin-bottom: 30px;
+        padding-left: 40px;
+    }
+
+    /* Timeline Content */
+    .timeline-content {
+        background: rgba(0, 0, 0, 0.8);
+        border: 1px solid #00ffcc;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover Effect */
+    .timeline-content:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(0, 255, 204, 0.8);
+    }
+
+    /* Timeline Line */
+    .timeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 2px;
+        width: 2px;
+        height: 100%;
+        background: #00ffcc;
+        transform: translateX(-50%);
+    }
+
+    /* Timeline Dot */
+    .timeline-item:before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        width: 10px;
+        height: 10px;
+        background: #00ffcc;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+    }
+        </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        document.body.appendChild(canvas);
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const stars = [];
+        const maxStars = 150; // Number of stars
+        const starRadius = 2; // Radius of stars
+        const lineDistance = 150; // Maximum distance for connecting lines
+
+        // Create stars
+        for (let i = 0; i < maxStars; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                radius: Math.random() * starRadius + 1,
+            });
+        }
+
+        // Draw stars and lines
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw stars
+            for (const star of stars) {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = "white";
+                ctx.fill();
+            }
+
+            // Draw lines
+            for (let i = 0; i < stars.length; i++) {
+                for (let j = i + 1; j < stars.length; j++) {
+                    const dx = stars[i].x - stars[j].x;
+                    const dy = stars[i].y - stars[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < lineDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(stars[i].x, stars[i].y);
+                        ctx.lineTo(stars[j].x, stars[j].y);
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / lineDistance})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        // Update star positions
+        function update() {
+            for (const star of stars) {
+                star.x += star.vx;
+                star.y += star.vy;
+
+                // Bounce off edges
+                if (star.x < 0 || star.x > canvas.width) star.vx *= -1;
+                if (star.y < 0 || star.y > canvas.height) star.vy *= -1;
+            }
+        }
+
+        // Animation loop
+        function animate() {
+            draw();
+            update();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Resize canvas on window resize
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    });
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+    </head>
+
+
+    <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="56" tabindex="0" >
+
+    
+        <!-- nav -->
+        <nav class="navbar navbar-expand-lg fixed-top  bg-transparent">
+            <div class="container-fluid">s
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav" >
+                    <ul class="navbar-nav ms-auto py-3 px-3">
+                        <li class="nav-item"><a href="#home" class="nav-link active fs-5 px-4">
+                            Home
+                        </a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link fs-5 px-4">
+                            About
+                        </a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link fs-5 px-4">
+                            Skills
+                        </a></li>
+                        <li class="nav-item"><a href="#education" class="nav-link fs-5 px-4">
+                            Education
+                        </a></li>
+                        <li class="nav-item"><a href="#hobbies" class="nav-link fs-5 px-4">
+                            Hobbies
+                        </a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link fs-5 px-4">
+                            Contact Me
+                        </a></li>
+                    </ul>
+                </div>
+
+            </div>
+        
+        </nav>
+
+        <div class=" one container-fluid text-white text-center" id="home">
+
+            <div class=" two container p-5 text-start">
+
+                <div class="two row align-item-center">
+
+                    <div class="col-md-4">
+                        <img src="Hernandez_Cris Carlo_INNF231_First Honor.jpg" alt="Profile Picture" class="picture img-fluid rounded-circle mb-2 border border-white border-3" />
+                    </div>
+
+                    <div class=" three col-md-8 ">
+                        <blockquote class="blockquote text-start">
+                            <h1 class="my-4" style="font-family: 'Times New Roman', Times, serif;">
+                                <b>Hello, I'm</b>
+                            </h1>
+                            <h2 class="typing-effect">Cris Carlo Hernandez</h2>
+                        </blockquote>
+                        <h2 class="text-start" style="font-family: 'Times New Roman', Times, serif;"> <strong>Aspiring Information Technology Professional</strong>
+                        </h2>
+                        <p class="lead mt-1" style="text-align: justify;">
+                            Welcome to my personal website! Here, you'll find an overview of my journey in technology and my skills. Explore to learn more about my passion for innovation, my academic achievements, and the hobbies that inspire me. Feel free to connect with me through the contact section!
+                        </p>
+                        <a href="#about" class="about btn btn-primary mt-3 text-start d-inline-block fs-5 rounded-5" style="font-family: 'Times New Roman', Times, serif;">Explore</a>
+
+                        <div class="container mt-4">
+                            <div class="social-icons d-flex justify-content-center gap-4">
+                                <a href="https://www.facebook.com/criscarlo.v.hernandez" class="text-decoration-none text-dark"><i class="bi bi-facebook fs-2" style="color: #1877f2;"></i></a>
+                                <a href="https://www.instagram.com/criss_carrrlo/" class="text-decoration-none text-dark" ><i class="bi bi-instagram fs-2" style="color: #e4405f;"></i></a>
+                                <a href="https://github.com/Cloud1708" class="text-decoration-none text-dark" ><i class="bi bi-github fs-2" style="color: #333333;"></i></a>
+                                <a href="" class="text-decoration-none text-dark"><i class="bi bi-tiktok fs-2" style="color: #69c9d0;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div> 
+
+        <div class="aboutme container-fluid text-white text-center" id="about">
+            <div class="two container p-5 text-start" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <div class="card-body d-flex flex-column" style="text-align: justify;" >
+                <div class="two row align-item-center">
+                    <div class="col-md-8">
+                        <blockquote class="blockquote text-start">
+                            <h1 class="about-me-title my-4" style="font-family: 'Press Start 2P', cursive; font-size: 50px;">
+                                <b>About Me</b>
+                            </h1>
+                        </blockquote>
+                        <p class="lead mt-1" style=" text-align: justify;">
+                            Welcome to my personal website! I am Cris Carlo Hernandez, a 2nd-year Information Technology student at National University. I am passionate about technology, innovation, and creating impactful solutions that make a difference. My journey in IT has been fueled by a strong desire to learn, grow, and contribute to the ever-evolving tech industry.
+        
+                            I specialize in web development, programming, and problem-solving, and I enjoy exploring new technologies to expand my skill set. Whether it's building user-friendly websites, developing efficient software, or tackling complex challenges, I am always eager to push my boundaries and deliver high-quality results.
+                        </p>
+                        <p class="lead mt-1" style=" text-align: justify;">
+                            This website is a reflection of my dedication to continuous learning and my enthusiasm for technology. Here, you will find an overview of my academic achievements, personal projects, and the skills I have developed along the way. I also share my hobbies and interests, which inspire me to think creatively and stay motivated.
+        
+                            Feel free to explore my portfolio, connect with me through the contact section, or follow me on social media to stay updated on my latest projects and activities. Thank you for visiting, and I look forward to sharing my journey with you!
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 px-5">
+                        <img src="Picture of Me.jfif" alt="Profile Picture" class="picture img-fluid rounded-5 mb-2 border border-white border-3"  style="object-fit: cover; width: 350px; height: 550px;"/>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    
+        <div>
+
+         <div class="skill container-fluid " id="skills">
+
+            <div class="container p-5">
+                <h2 class="about-me-title my-4" style="font-family: 'Press Start 2P', cursive; font-size: 50px; text-align: center;">
+                    <b>Skills</b>
+                </h2>
+
+                <div class="row">
+
+                    <div class="col-md-4 my-3">
+                        <div class="card h-80 d-flex flex-column " style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            <div class="card-body d-flex flex-column" style="text-align: justify;">
+                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
+                                    Programming
+                                </h5>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    Programming is the process of designing and building software solutions to solve real-world problems. It involves writing, testing, and maintaining code in various programming languages such as Python, Java, and C++. Through programming, I have developed efficient and scalable applications that enhance productivity and user experience.
+                                </p>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    My expertise includes understanding algorithms, data structures, and software design principles, which are essential for creating robust and maintainable systems. Programming is not just a skill but a creative process that empowers me to turn ideas into reality.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 my-3">
+                        <div class="card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
+                                    Web Development
+                                </h5>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    Web development is the process of creating websites and web applications that are accessible through the internet. It involves designing, coding, and maintaining websites to ensure they are functional, user-friendly, and visually appealing.
+                                </p>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    My expertise includes building responsive and interactive websites using technologies like HTML, CSS, and JavaScript. I am also skilled in frameworks such as React and Bootstrap, which help streamline the development process and enhance user experience.
+                                </p>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    Web development is not just about coding; it’s about understanding user needs and creating solutions that are both functional and aesthetically pleasing. It combines creativity and technical skills to bring ideas to life on the web.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 my-3">
+                        <div class="card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
+                                    Database Management
+                                </h5>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    Database management involves the design, implementation, and maintenance of systems that store and organize data efficiently. It ensures that data is accessible, secure, and reliable for various applications and users.
+                                </p>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    My expertise includes working with relational databases like MySQL and PostgreSQL, as well as NoSQL databases like MongoDB. I am proficient in writing optimized queries, designing normalized schemas, and managing large datasets to ensure high performance and scalability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 my-3">
+                        <div class="card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
+                                    Problem Solving
+                                </h5>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    Strong analytical and problem-solving skills, with experience in competitive programming and algorithm design.
+                                </p>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    Problem solving is not just about finding answers but also about understanding the root cause of challenges and developing innovative solutions. It requires critical thinking, creativity, and the ability to break down complex problems into manageable components.
+                                </p>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    My problem-solving approach involves leveraging logical reasoning, data analysis, and technical expertise to address challenges effectively. Whether it's debugging code, optimizing algorithms, or designing efficient workflows, I strive to deliver solutions that are both practical and impactful.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 my-3">
+                        <div class="card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
+                                    UX/UI Design
+                                </h5>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    UX (User Experience) and UI (User Interface) Design focus on creating intuitive, user-friendly, and visually appealing digital experiences. UX design emphasizes understanding user needs and behaviors to ensure seamless interaction with a product, while UI design focuses on the visual elements like layouts, colors, and typography.
+                                </p>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    My expertise in UX/UI design includes wireframing, prototyping, and usability testing to create designs that are both functional and aesthetically pleasing. I strive to balance creativity with practicality, ensuring that users can achieve their goals efficiently while enjoying the experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 my-3">
+                        <div class="card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
+                                    Adaptability
+                                </h5>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    Adaptability is the ability to adjust to new environments, technologies, and challenges with ease. It involves staying flexible and open to change, which is essential in the fast-paced world of technology. My adaptability allows me to quickly learn new tools, frameworks, and methodologies to meet project requirements effectively.
+                                </p>
+                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                                    In addition to technical adaptability, I excel at collaborating with diverse teams and adjusting to different work cultures. Whether it's working on-site, remotely, or in hybrid setups, I ensure seamless communication and productivity. This skill has enabled me to thrive in dynamic environments and deliver results under varying circumstances.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="educations container my-5" id="education">
+        <h2 class="about-me-title my-4" style="font-family: 'Press Start 2P', cursive; font-size: 50px; text-align: center;">
+            <b>Education</b>
+        </h2>
+        <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3 style="color: #00ffcc;">National University</h3>
+                    <p style="color: #ffffff;">Bachelor of Science in Information Technology</p>
+                    <p style="color: #ffffff;">2023 - Present</p>
+                    <p style="color: #ffffff;">I am currently pursuing my degree .</p>
+                </div>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3 style="color: #00ffcc;">XYZ High School</h3>
+                    <p style="color: #ffffff;">High School Diploma</p>
+                    <p style="color: #ffffff;">2019 - 2023</p>
+                    <p style="color: #ffffff;">During my high school years, I developed a strong foundation in mathematics and computer .</p>
+                </div>
+            </div>
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3 style="color: #00ffcc;">ABC Elementary School</h3>
+                    <p style="color: #ffffff;">Elementary Education</p>
+                    <p style="color: #ffffff;">2013 - 2019</p>
+                    <p style="color: #ffffff;">My elementary education laid the groundwork for my academic journey, fostering curiosity and a love for learning.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3 style="color: #00ffcc;">ABC Elementary School</h3>
+                    <p style="color: #ffffff;">Elementary Education</p>
+                    <p style="color: #ffffff;">2013 - 2019</p>
+                    <p style="color: #ffffff;">My elementary education laid the groundwork for my academic journey, fostering curiosity and a love for learning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="container-fluid bg-transparent p-5">
+
+            <div class="container border border-1 rounded-3 p-4"style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <h2 class="text-center mb-4 text-white">Contact Me</h2>
+                <form>
+                    <div class="mb-1">
+                        <label for="name" class="form-label text-white">Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name" id="name" required />
+                    </div>
+                    <div class="mb-1">
+                        <label for="email" class="form-label text-white">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter your email" id="email" required />
+                    </div>
+                    <div class="mb-1">
+                        <label for="message" class="form-label text-white">Message</label>
+                        <textarea class="form-control" placeholder="Enter your message" id="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4 d-flex justify-content-center w-100">Send Message</button>
+                </form>
+            </div>
+    </div> 
+
+       
+
+        <footer class="text-white text-center py-3" style="background-color: rgba(19, 18, 18, 0.8); backdrop-filter: blue(10px);">
+                <p class="mb-0">© 2025 Cris Carlo Hernandez  |  All rights reserved</p>
+                <p class="mb-0">Follow me on <a href="https://github.com/Cloud1708" class="text-decoration-none">GitHub</a>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
