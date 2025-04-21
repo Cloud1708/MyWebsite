@@ -236,9 +236,12 @@
 
     /* Hover effect for the card */
     .cards:hover {
-        transform: scale(1.05); /* Zoom effect */
+        transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.8); /* Stronger glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
     
-    }
+    
 
    
 
@@ -341,6 +344,16 @@ a:hover {
         transform: translateY(0);
     }
 }
+
+footer {
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #00ffcc; }
+    to { box-shadow: 0 0 20px #00ccff; }
+}
+
 
         </style>
 
@@ -509,7 +522,7 @@ document.addEventListener("scroll", function () {
                                 <b>Hello, I'm</b>
                             </h1>
                         </blockquote>
-                        <h1 class="typing-effect" style="font-family: 'Times New Roman', Times, serif;">Cris Carlo Hernandez</h1>
+                       <h1 class="typing-effect" style="font-family: 'Times New Roman', Times, serif;">Cris Carlo Hernandez</h1>
                         <h2 class="text-start" style="font-family: 'Times New Roman', Times, serif;"> <strong>Aspiring Information Technology Professional</strong>
                         </h2>
                         <p class="lead mt-1" style="text-align: justify;">
