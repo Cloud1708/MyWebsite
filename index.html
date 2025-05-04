@@ -145,25 +145,27 @@
                 padding-bottom: 0%;
             }
 
-            .picture.img-fluid.rounded-circle {
-                box-shadow: 0 0 15px 5px #00ffcc; /* Glowing effect */
-                transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
-            }
+            /* Glowing effect for profile picture */
+    .picture.img-fluid.rounded-circle {
+        box-shadow: 0 0 15px 5px #00ffcc; /* Initial glow */
+        transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+    }
 
-            .picture.img-fluid.rounded-circle:hover {
-                 box-shadow: 0 0 25px 10px #00ffcc; /* Stronger glow on hover */
-            }       
+             /* Stronger glow on hover */
+    .picture.img-fluid.rounded-circle:hover {
+        box-shadow: 0 0 25px 10px #00ffcc;
+    }     
 
-             /* Typing effect */
-            .typing-effect {
-                font-size: 2.5rem;
-                font-weight: bold;
-                white-space: nowrap;
-                display: inline-block; /* Ensures the width only applies to the text */
-                width: 0;
-                color: #00ffcc; /* Neon green color */
-                text-shadow: 0 0 8px #00ffcc; /* Glowing effect */
-            }
+            /* Typing effect for text */
+    .typing-effect {
+        font-size: 2.5rem; /* Font size */
+        font-weight: bold; /* Bold text */
+        white-space: nowrap; /* Prevent text wrapping */
+        display: inline-block; /* Inline block for width control */
+        width: 0; /* Initial width */
+        color: #00ffcc; /* Neon green color */
+        text-shadow: 0 0 8px #00ffcc; /* Glowing effect */
+    }
 
             
             /* Circular border for the button */
@@ -354,8 +356,67 @@ footer {
     to { box-shadow: 0 0 20px #00ccff; }
 }
 
+@media screen and (max-width: 360px) {
+    /* Center-align all content */
+    body {
+        text-align: center;
+    }
 
-        </style>
+    /* Adjust navbar */
+    .navbar-brand {
+        font-size: 14px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* Adjust container width */
+    .container, .container-fluid {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Adjust cards */
+    .card {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    /* Adjust sections */
+    .aboutme, .skill, .educations, .hobbies, .contact {
+        padding: 20px 5px;
+    }
+
+    /* Adjust images */
+    img.picture {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust timeline */
+    .timeline-content {
+        padding: 10px;
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+</style>
+
 
 <script>
 
@@ -465,95 +526,126 @@ document.addEventListener("scroll", function () {
     <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="56" tabindex="0" >
 
         <div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; justify-content: center; align-items: center; z-index: 9999;">
-            <div class="spinner" style="border: 4px solid #00ffcc; border-top: 4px solid transparent; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;">  
+            <!-- Spinner for loading animation -->
+            <div class="spinner" style="border: 4px solid #00ffcc; border-top: 4px solid transparent; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;">
             </div>
         </div>
         
        
-        <!-- nav -->
-        <nav class="navbar navbar-expand-lg fixed-top  bg-transparent">
+        <nav class="navbar navbar-expand-lg fixed-top bg-transparent">
             <div class="container-fluid">
-                <a class="navbar-brand fs-4 px-5" style="color: #00ffcc; text-shadow: 0 0 8px #00ffcc; font-family: 'Press Start 2P', cursive;">Cloud 1708</a>
-                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+                <!-- Navbar brand -->
+                <a class="navbar-brand fs-4 px-5" style="color: #00ffcc; text-shadow: 0 0 8px #00ffcc; font-family: 'Press Start 2P', cursive;">
+                    Cloud 1708
+                </a>
+        
+                <!-- Navbar toggler for mobile view -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav" >
+        
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto py-3 px-3">
-                        <li class="nav-item"><a href="#home" class="nav-link active fs-5 px-4">
-                            Home
-                        </a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link fs-5 px-4">
-                            About
-                        </a></li>
-                        <li class="nav-item"><a href="#skills" class="nav-link fs-5 px-4">
-                            Skills
-                        </a></li>
-                        <li class="nav-item"><a href="#education" class="nav-link fs-5 px-4">
-                            Education
-                        </a></li>
-                        <li class="nav-item"><a href="#hobbies" class="nav-link fs-5 px-4">
-                            Hobbies
-                        </a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link fs-5 px-4">
-                            Contact Me
-                        </a></li>
+                        <!-- Home link -->
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active fs-5 px-4">Home</a>
+                        </li>
+                        <!-- About link -->
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link fs-5 px-4">About</a>
+                        </li>
+                        <!-- Skills link -->
+                        <li class="nav-item">
+                            <a href="#skills" class="nav-link fs-5 px-4">Skills</a>
+                        </li>
+                        <!-- Education link -->
+                        <li class="nav-item">
+                            <a href="#education" class="nav-link fs-5 px-4">Education</a>
+                        </li>
+                        <!-- Hobbies link -->
+                        <li class="nav-item">
+                            <a href="#hobbies" class="nav-link fs-5 px-4">Hobbies</a>
+                        </li>
+                        <!-- Contact Me link -->
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link fs-5 px-4">Contact Me</a>
+                        </li>
                     </ul>
                 </div>
-
             </div>
-        
         </nav>
 
-        <div class=" one container-fluid text-white text-center" id="home">
-
-            <div class=" two container p-5 text-start">
-
+        <div class="one container-fluid text-white text-center" id="home">
+            <!-- Home Section Container -->
+            <div class="two container p-5 text-start">
+                <!-- Row for Profile Picture and Introduction -->
                 <div class="two row align-item-center">
-
+                    <!-- Profile Picture -->
                     <div class="col-md-4">
                         <img src="Image/Home/Hernandez_Cris Carlo_INNF231_First Honor.jpg" loading="lazy" alt="Profile Picture" class="picture img-fluid rounded-circle mb-2 border border-white border-3" />
                     </div>
-
-                    <div class=" three col-md-8 ">
-                        
+        
+                    <!-- Introduction Text -->
+                    <div class="three col-md-8">
+                        <!-- Greeting -->
                         <blockquote class="blockquote text-start">
                             <h1 class="my-2" style="font-family: 'Times New Roman', Times, serif;">
                                 <b>Hello, I'm</b>
                             </h1>
                         </blockquote>
-                       <h1 class="typing-effect" style="font-family: 'Times New Roman', Times, serif;">Cris Carlo Hernandez</h1>
-                        <h2 class="text-start" style="font-family: 'Times New Roman', Times, serif;"> <strong>Aspiring Information Technology Professional</strong>
+                        <!-- Name with Typing Effect -->
+                        <h1 class="typing-effect" style="font-family: 'Times New Roman', Times, serif;">Cris Carlo Hernandez</h1>
+                        <!-- Title -->
+                        <h2 class="text-start" style="font-family: 'Times New Roman', Times, serif;">
+                            <strong>Aspiring Information Technology Professional</strong>
                         </h2>
+                        <!-- Description -->
                         <p class="lead mt-1" style="text-align: justify;">
                             Welcome to my personal website! Here, you'll find an overview of my journey in technology and my skills. Explore to learn more about my passion for innovation, my academic achievements, and the hobbies that inspire me. Feel free to connect with me through the contact section!
                         </p>
+                        <!-- Explore Button -->
                         <a href="#about" class="about btn btn-primary mt-3 text-start d-inline-block fs-5 rounded-5" style="font-family: 'Times New Roman', Times, serif;">Explore</a>
-
+        
+                        <!-- Social Media Icons -->
                         <div class="container mt-4">
                             <div class="social-icons d-flex justify-content-center gap-4">
-                                <a href="https://www.facebook.com/criscarlo.v.hernandez" class="text-decoration-none text-dark"><i class="bi bi-facebook fs-2" style="color: #1877f2;"></i></a>
-                                <a href="https://www.instagram.com/criss_carrrlo/" class="text-decoration-none text-dark" ><i class="bi bi-instagram fs-2" style="color: #e4405f;"></i></a>
-                                <a href="https://github.com/Cloud1708" class="text-decoration-none text-dark" ><i class="bi bi-github fs-2" style="color: #333333;"></i></a>
-                                <a href="" class="text-decoration-none text-dark"><i class="bi bi-tiktok fs-2" style="color: #69c9d0;"></i></a>
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/criscarlo.v.hernandez" class="text-decoration-none text-dark">
+                                    <i class="bi bi-facebook fs-2" style="color: #1877f2;"></i>
+                                </a>
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/criss_carrrlo/" class="text-decoration-none text-dark">
+                                    <i class="bi bi-instagram fs-2" style="color: #e4405f;"></i>
+                                </a>
+                                <!-- GitHub -->
+                                <a href="https://github.com/Cloud1708" class="text-decoration-none text-dark">
+                                    <i class="bi bi-github fs-2" style="color: #333333;"></i>
+                                </a>
+                                <!-- TikTok -->
+                                <a href="" class="text-decoration-none text-dark">
+                                    <i class="bi bi-tiktok fs-2" style="color: #69c9d0;"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
-                
             </div>
-        </div> 
+        </div>
 
         <div class="aboutme container-fluid text-white text-center" id="about">
+            <!-- About Me Section -->
             <div class="two container p-5 text-start" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                  <!-- Section Title -->
                 <blockquote class="blockquote text-start">
                     <h1 class="about-me-title my-4" style="font-family: 'Press Start 2P', cursive; font-size: 50px;">
                         <b>About Me</b>
                     </h1>
                 </blockquote>
+                <!-- Content Section -->
                 <div class="card-body d-flex flex-column" style="text-align: justify;" >
                 <div class="two row align-item-center">
+                      <!-- About Me Text -->
                     <div class="col-md-8">
                         <p class="lead mt-1" style=" text-align: justify;">
                             Welcome to my personal website! I am Cris Carlo Hernandez, a 2nd-year Information Technology student at National University. I am passionate about technology, innovation, and creating impactful solutions that make a difference. My journey in IT has been fueled by a strong desire to learn, grow, and contribute to the ever-evolving tech industry.
@@ -566,7 +658,7 @@ document.addEventListener("scroll", function () {
                             Feel free to explore my portfolio, connect with me through the contact section, or follow me on social media to stay updated on my latest projects and activities. Thank you for visiting, and I look forward to sharing my journey with you!
                         </p>
                     </div>
-
+                        <!-- Profile Picture -->
                     <div class="col-md-4 px-5">
                         <img src="Image/About/Picture of Me.jfif"  loading="lazy" alt="Profile Picture" class="picture img-fluid rounded-5 mb-2 border border-white border-3"  style="object-fit: cover; width: 350px; height: 550px;"/>
                     </div>
@@ -588,105 +680,386 @@ document.addEventListener("scroll", function () {
                 <div class="row">
 
                     <div class="col-md-4 my-3">
-                        <div class="cards card h-80 d-flex flex-column " style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                            <div class="card-body d-flex flex-column" style="text-align: justify;">
-                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
-                                    Programming
-                                </h5>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    Programming is the process of designing and building software solutions to solve real-world problems. It involves writing, testing, and maintaining code in various programming languages such as Python, Java, and C++. Through programming, I have developed efficient and scalable applications that enhance productivity and user experience.
-                                </p>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    My expertise includes understanding algorithms, data structures, and software design principles, which are essential for creating robust and maintainable systems. Programming is not just a skill but a creative process that empowers me to turn ideas into reality.
-                                </p>
+                        <div class="cards card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            <h5 class="card-title mt-3 d-flex align-items-center justify-content-center" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
+                                <i class="bi bi-laptop" style="font-size: 1.5rem; margin-right: 10px;"></i>
+                                Programming
+                            </h5>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="70, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        70%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/hd-java-programming-logo-png-701751694771848sm650yaqjt-Photoroom.png" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="90, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        90%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/angle-area-text-brand-other-html-5-thumbnail-Photoroom.png" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="85, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        85%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/kisspng-cascading-style-sheets-css3-logo-5b1a6a5c5dfbb2.855009901528457820385-Photoroom.png" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="70, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        70%
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 my-3">
                         <div class="cards card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
-                                    Web Development
-                                </h5>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    Web development is the process of creating websites and web applications that are accessible through the internet. It involves designing, coding, and maintaining websites to ensure they are functional, user-friendly, and visually appealing.
-                                </p>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    My expertise includes building responsive and interactive websites using technologies like HTML, CSS, and JavaScript. I am also skilled in frameworks such as React and Bootstrap, which help streamline the development process and enhance user experience.
-                                </p>
-
+                            <h5 class="card-title mt-3 d-flex align-items-center justify-content-center" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
+                                <i class="bi bi-palette" style="font-size: 1.5rem; margin-right: 10px;"></i>
+                                Design
+                            </h5>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/mobile-app-ux-ui-basics.jpg" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="70, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        70%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/Canva-Logo.png" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="85, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        85%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/images-Photoroom.png" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="70, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        70%
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 my-3">
                         <div class="cards card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
-                                    Database Management
-                                </h5>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    Database management involves the design, implementation, and maintenance of systems that store and organize data efficiently. It ensures that data is accessible, secure, and reliable for various applications and users.
-                                </p>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    My expertise includes working with relational databases like MySQL and PostgreSQL, as well as NoSQL databases like MongoDB. I am proficient in writing optimized queries, designing normalized schemas, and managing large datasets to ensure high performance and scalability.
-                                </p>
+                            <h5 class="card-title mt-3 d-flex align-items-center justify-content-center" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
+                                <i class="bi bi-tools" style="font-size: 1.5rem; margin-right: 10px;"></i>
+                                Tools
+                            </h5>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/Github-desktop-logo-symbol.svg.png" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="90, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        90%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/Visual_Studio_Code_1.35_icon.svg.png" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="90, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        90%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/NetBeans-Logo.wine.png" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="90, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        90%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-row align-items-center justify-content-between" style="text-align: justify;">
+                                <!-- Image -->
+                                <img src="Image/Skills/Android_Studio_icon_(2023).svg.png" alt="JavaScript Logo" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+                    
+                                <!-- Circular Progress Bar -->
+                                <div class="circular-progress" style="position: relative; width: 150px; height: 150px;">
+                                    <svg viewBox="0 0 36 36" class="circular-chart" style="transform: rotate(-90deg);">
+                                        <path
+                                            class="circle-bg"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#eee"
+                                            stroke-width="3.8"
+                                        />
+                                        <path
+                                            class="circle"
+                                            d="M18 2.0845
+                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            fill="none"
+                                            stroke="#00ffcc"
+                                            stroke-width="3.8"
+                                            stroke-dasharray="90, 100" <!-- Adjust the first value for percentage -->
+                                        />
+                                    </svg>
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 16px; color: #00ffcc;">
+                                        90%
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4 my-3">
-                        <div class="cards card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
-                                    Problem Solving
-                                </h5>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    Strong analytical and problem-solving skills, with experience in competitive programming and algorithm design.
-                                </p>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    Problem solving is not just about finding answers but also about understanding the root cause of challenges and developing innovative solutions. It requires critical thinking, creativity, and the ability to break down complex problems into manageable components.
-                                </p>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    My problem-solving approach involves leveraging logical reasoning, data analysis, and technical expertise to address challenges effectively. Whether it's debugging code, optimizing algorithms, or designing efficient workflows.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 my-3">
-                        <div class="cards card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
-                                    UX/UI Design
-                                </h5>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    UX (User Experience) and UI (User Interface) Design focus on creating intuitive, user-friendly, and visually appealing digital experiences. UX design emphasizes understanding user needs and behaviors to ensure seamless interaction with a product, while UI design focuses on the visual elements like layouts, colors, and typography.
-                                </p>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    My expertise in UX/UI design includes wireframing, prototyping, and usability testing to create designs that are both functional and aesthetically pleasing. I strive to balance creativity with practicality, ensuring that users can achieve their goals efficiently while enjoying the experience.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 my-3">
-                        <div class="cards card h-80 d-flex flex-column" style="background: rgba(0, 0, 0, 0.8); border: 1px solid #00ffcc; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title" style="font-family: 'Press Start 2P', cursive; color: #00ffcc; text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; text-align: center;">
-                                    Adaptability
-                                </h5>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    Adaptability is the ability to adjust to new environments, technologies, and challenges with ease. It involves staying flexible and open to change, which is essential in the fast-paced world of technology. My adaptability allows me to quickly learn new tools, frameworks, and methodologies to meet project requirements effectively.
-                                </p>
-                                <p class="card-text flex-grow-1" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
-                                    In addition to technical adaptability, I excel at collaborating with diverse teams and adjusting to different work cultures. Whether it's working on-site, remotely, or in hybrid setups, I ensure seamless communication and productivity. This skill has enabled me to thrive in dynamic environments and deliver results under varying circumstances.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
+         
+                   
                 </div>
             </div>
         </div> 
@@ -724,9 +1097,12 @@ document.addEventListener("scroll", function () {
                         <div class="col-md-5">
                             <h3 style="background: rgba(0, 0, 0, 0.8); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Press Start 2P', cursive; font-size: 35px;" class="about-me-title my-4 ">Senior High School</h3>
                     <ul style="color: white; text-align: justify;" >
-                        <li><p style="color: #ffffff;">High School Diploma</p></li>
+                        <li><p style="color: #ffffff;">The Mabini Academy</p></li>
                         <li><p style="color: #ffffff;">2021 - 2023</p></li>
-                        <li><p style="color: #ffffff;">During my high school years, I developed a strong foundation in mathematics and computer .</p></li>
+                        <li><p style="color: #ffffff;">With Honor</p></li>
+                        <li><p style="color: #ffffff;">Top 20 National Finalists in 2022 Junior Chemistry Congress - PACSiyensya Jr.</p></li>
+                        <li><p style="color: #ffffff;">Champion: 2023 ChEIn Reaction 8th Science Investigatory Project Competition - SHS Life Science</p></li>
+                        <li><p style="color: #ffffff;">Best Research Visual Layout: 2023 ChEIn Reaction 8th Science Investigatory Project Competition - SHS Life Science</p></li>
                     </ul>
                 </div>
                     <div class="col-md-7 d-flex justify-content-center align-items-center" >
@@ -742,9 +1118,9 @@ document.addEventListener("scroll", function () {
                         <div class="col-md-5">
                             <h3 style="background: rgba(0, 0, 0, 0.8); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Press Start 2P', cursive; font-size: 35px;"class="about-me-title my-4">High School</h3>
                             <ul style="color: white; text-align: justify;">
-                                <li><p style="color: #ffffff;">Elementary Education</p></li>
+                                <li><p style="color: #ffffff;">The Mabini Academy</p></li>
                                 <li><p style="color: #ffffff;">2017 - 2021</p></li>
-                                <li><p style="color: #ffffff;">My elementary education laid the groundwork for my academic journey, fostering curiosity and a love for learning.</p></li>
+                                <li><p style="color: #ffffff;">With Honor</p></li>
                             </ul>
                 </div>
                     <div class="col-md-7 d-flex justify-content-center align-items-center" >
@@ -762,9 +1138,9 @@ document.addEventListener("scroll", function () {
                             style="background: rgba(0, 0, 0, 0.8); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Press Start 2P', cursive; font-size: 31px;">Elementary<br>School
                             </h3>
                             <ul style="color: white; text-align: justify;">
-                                <li><p style="color: #ffffff;">Elementary Education</p></li>
+                                <li><p style="color: #ffffff;">Anangi Elementary School</p></li>
                                 <li><p style="color: #ffffff;">2012 - 2017</p></li>
-                                <li> <p style="color: #ffffff;">My elementary education laid the groundwork for my academic journey, fostering curiosity and a love for learning.</p></li>
+                                <li> <p style="color: #ffffff;">With Honor</p></li>
                             </ul>     
                 </div>
                     <div class="col-md-7 d-flex justify-content-center align-items-center" >
@@ -912,7 +1288,19 @@ document.addEventListener("scroll", function () {
                 <p class="lead text-center" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
                     Feel free to reach out to me for any inquiries, collaborations, or just to say hello!
                 </p>
-                <form action="https://formspree.io/f/your-form-id" method="POST" class="mt-4">
+                <p class="text-center" style="font-family: Arial, sans-serif; color: #ffffff; opacity: 0.9;">
+                    <a href="mailto:ch512291@gmail.com" style="text-decoration: none; color: #ffffff;">
+                        <i class="bi bi-envelope" style="margin-right: 10px; color: #00ffcc; text-shadow: 0 0 8px #00ffcc;"></i> ch512291@gmail.com
+                    </a> <br>
+                    <a href="tel:09952604071" style="text-decoration: none; color: #ffffff;">
+                        <i class="bi bi-telephone" style="margin-right: 10px; color: #00ffcc; text-shadow: 0 0 8px #00ffcc;"></i> 09952604071
+                    </a> <br>
+                    <a href="https://www.google.com/maps/place/Carandang-Hernandez+compound/@13.9231457,121.2430824,1104m/data=!3m1!1e3!4m9!1m2!2m1!1zLA!3m5!1s0x33bd6b003e6a4737:0x6a183496324d1117!8m2!3d13.9242357!4d121.2429944!16s%2Fg%2F11x8ttphck?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" 
+                       style="text-decoration: none; color: #ffffff;">
+                        <i class="bi bi-geo-alt" style="margin-right: 10px; color: #00ffcc; text-shadow: 0 0 8px #00ffcc;"></i> 218 Purok 3, Malitlit, Lipa City, Batangas
+                    </a> <br>
+                </p>
+                <form action="" method="" class="mt-4">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="name" class="form-label text-white" style="padding-bottom: 5px;">Name</label>
@@ -935,7 +1323,7 @@ document.addEventListener("scroll", function () {
                         <label for="name" class="form-label text-white" style="padding-bottom: 5px;">Message</label>
                         <textarea name="message" rows="7" class="form-control rounded-3" placeholder="Your Message" required style="border: 1px solid #00ffcc;"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary rounded-5 px-5 d-block mx-auto" style="background-color: #00ffcc; border: none; color: #000; font-weight: bold;">Send</button>
+                    <button type="button" id="sendButton" class="btn btn-primary rounded-5 px-5 d-block mx-auto" style="background-color: #00ffcc; border: none; color: #000; font-weight: bold;">Send</button>
                 </form>
             </div>
         </div>
@@ -959,6 +1347,45 @@ document.addEventListener("scroll", function () {
         </p>
         
         <p>© 2025 Cris Carlo Hernandez | All rights reserved</p>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            document.getElementById("sendButton").addEventListener("click", function () {
+                // Get form field values
+                const name = document.querySelector('input[name="name"]');
+                const email = document.querySelector('input[name="email"]');
+                const phone = document.querySelector('input[name="phone"]');
+                const subject = document.querySelector('input[name="subject"]');
+                const message = document.querySelector('textarea[name="message"]');
+        
+                // Check if any field is empty
+                if (!name.value.trim() || !email.value.trim() || !phone.value.trim() || !subject.value.trim() || !message.value.trim()) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Please fill out all fields before sending.',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#ff0000',
+                    });
+                } else {
+                    // If all fields are filled, show success message
+                    Swal.fire({
+                        title: 'Message Sent!',
+                        text: 'Thank you for reaching out. I will get back to you soon!',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#00ffcc',
+                    }).then(() => {
+                        // Clear the form fields
+                        name.value = '';
+                        email.value = '';
+                        phone.value = '';
+                        subject.value = '';
+                        message.value = '';
+                    });
+                }
+            });
+        </script>
         
     </footer>
 
