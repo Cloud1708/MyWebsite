@@ -35,13 +35,13 @@ Welcome to my personal website! This project showcases my skills, achievements, 
 1. **Clone the repository**:
    Open your terminal or command prompt and run the following command:
    ```bash
-   git clone https://github.com/Cloud1708/personal-website.git
+   git clone https://github.com/Cloud1708/MyWebsite.git
    ```
 
 2. **Navigate to the project folder**:
    Change your directory to the project folder:
    ```bash
-   cd personal-website
+   cd MyWebsite
    ```
 
 3. **Open the website locally**:
